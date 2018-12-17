@@ -8,7 +8,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    author: [Author]
+    authors: [Author]
   }
 `;
 

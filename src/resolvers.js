@@ -19,7 +19,7 @@ const authors = [
 
 const resolvers =  {
   Query: {
-    author: () => {
+    authors: () => {
       return authors;
     },
   },
