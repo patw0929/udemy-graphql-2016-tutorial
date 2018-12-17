@@ -21,7 +21,7 @@ const resolvers =  {
       return author.save();
     },
     deleteAuthor: (root, { id }) => {
-      return authorModel.deleteOne({ id });
+      return authorModel.findOneAndRemove({ id });
     },
     updateAuthor: (root, { id, name }) => {
       return authorModel.findOneAndUpdate({ id }, { name });
