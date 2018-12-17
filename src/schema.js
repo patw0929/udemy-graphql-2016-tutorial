@@ -9,6 +9,7 @@ const typeDefs = gql`
 
   type Query {
     authors: [Author]
+    author(age: Int): Author
   }
 `;
 

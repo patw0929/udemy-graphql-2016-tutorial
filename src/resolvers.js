@@ -22,6 +22,9 @@ const resolvers =  {
     authors: () => {
       return authors;
     },
+    author: (root, { age }) => {
+      return authors.find(author => author.age === age);
+    },
   },
 };
 
