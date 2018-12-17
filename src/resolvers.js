@@ -47,6 +47,9 @@ const resolvers =  {
 
       return author.save();
     },
+    deleteAuthor: (root, { id }) => {
+      return authorModel.remove({ id });
+    },
   },
 };
 
