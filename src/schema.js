@@ -2,7 +2,7 @@ import { gql } from 'apollo-server-express';
 
 const typeDefs = gql`
   type Author {
-    id: Int
+    id: String
     age: Int
     name: String
     books: [String]
@@ -10,7 +10,7 @@ const typeDefs = gql`
 
   type Query {
     authors: [Author]
-    author(id: Int): Author
+    author(id: String): Author
   }
 `;
 
