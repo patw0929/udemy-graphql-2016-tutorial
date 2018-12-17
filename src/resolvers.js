@@ -1,3 +1,6 @@
+import mongoose from 'mongoose';
+import authorModel from '../models/author';
+
 const authors = [
   {
     id: 21,
@@ -32,6 +35,17 @@ const resolvers =  {
     },
     author: (root, { id }) => {
       return authors.find(author => author.id === id);
+    },
+  },
+  Mutation: {
+    addAuthor: (root, { age, name, books }) => {
+      const author = new authorModel({
+        age,
+        name,
+        books,
+      });
+
+      return author.save();
     },
   },
 };
